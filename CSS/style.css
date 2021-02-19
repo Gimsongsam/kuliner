@@ -1,0 +1,579 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+*{-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: 'Source Sans Pro', sans-serif, 'Arial';}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, nav, main, footer{display: block;} 
+header::after, section::after, article::after, aside::after, nav::after, main::after, footer::after{content: ""; display: block; clear: both;} /*display:flex; 선언을 했다면 사용하지 말 것!*/
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.clear{clear: both;} /* <div class="clear"></div> */
+.impact{font-family: 'Pacifico', cursive;}
+
+/*
+.map{font-size: 24px; color: #ff0000;}
+.map:hover{color: #0000ff}
+
+
+.img_box{width: 200px; height: 160px; background-image: url(../img/menu_1.jpg); background-size: cover; background-position: 50% 50%;}
+
+.test_title{margin-top: 1200px;}
+*/
+
+#header{background-color: #ddd;}
+#header .top{height: 30px; background-color: #000;}
+#header .top .wrap{width: 1160px; height: 100%; padding: 0 10px; margin: 0 auto; /*background-color: #ccc;*/}
+#header .top .wrap .info{float: left;}
+#header .top .wrap .info ul{}
+#header .top .wrap .info ul li{float:left; color:#fff; line-height: 30px; margin-right: 10px; font-size: 14px;}
+
+#header .top .wrap .sns{float: right;}
+#header .top .wrap .sns ul{}
+#header .top .wrap .sns ul li{float: left; margin: 0 10px;}
+#header .top .wrap .sns ul li a{display: block; line-height: 30px; color:#fff; font-size: 14px;}
+#header .top .wrap .sns ul li:hover a{color:#ff6600;}
+
+
+#header .main{/*width: 100%; height: auto;*/ background-image: url(../img/1.jpg); background-size: cover; background-position: 50% 50%; background-attachment: fixed;}
+
+#header .main .dark{background-color: rgba(0,0,0,0.5);}
+
+#header .main .dark .wrap{width: 1160px;height: 66px; padding: 0 10px; margin: 0 auto;}
+/* (66-32)/2 */
+#header .main .dark .wrap .logo{float: left; padding: 17px 0;}
+#header .main .dark .wrap .logo a{display: block;}
+#header .main .dark .wrap .logo a img{display: block;}
+
+#header .main .dark .wrap .menu{float: right;}
+#header .main .dark .wrap .menu ul{float: left;}
+#header .main .dark .wrap .menu ul li{float: left;} /*float, display 각각 독립적인 공간  또는 객체에 개별 적용(상속 없음)*/
+#header .main .dark .wrap .menu ul li a{display: block; font-size: 16px; padding: 0 20px; line-height: 66px; color:#fff; font-weight: bold; transition:background-color 0.5s, color 0.5s;}
+#header .main .dark .wrap .menu ul li:hover a{background-color: rgba(255,255,255,0.6); color:#ff6600;}
+
+#header .main .dark .wrap .menu .reseve_btn{float: left; width: 180px; text-align: right; padding: 12px 0;}
+/* (66-42)/2 */
+#header .main .dark .wrap .menu .reseve_btn a{display: inline-block; color:#fff; font-size: 16px;padding: 10px 14px; border:1px solid #ff6600; background-color: #ff6600; border-radius:4px; font-weight: bold; transition:background-color 0.5s, color 0.5s;}
+#header .main .dark .wrap .menu .reseve_btn a:hover{background-color: #fff; color:#ff6600;}
+
+
+#header .main .dark .main_title{width: 1160px; padding: 0 10px; height: 494px; margin: 0 auto; /*display: table;*/ position: relative;}
+
+#header .main .dark .main_title .txt_center{/*display: table-cell; text-align: center; vertical-align: middle;*/ position: absolute; left:50%; top:50%; width: 100%; transform:translate(-50%, -50%); text-align: center;}
+
+#header .main .dark .main_title .txt_center h1{font-size: 54px; line-height: 72px; color:#fff;}
+#header .main .dark .main_title .txt_center p{font-size: 16px; color:#fff; padding: 16px 0 40px;}
+#header .main .dark .main_title .txt_center ul{font-size: 0;}
+#header .main .dark .main_title .txt_center ul li{display: inline-block; margin: 0 10px;}
+#header .main .dark .main_title .txt_center ul li a{display: block; width: 202px; height: 44px; border:1px solid #ff6600; line-height: 42px; color:#fff; text-transform: capitalize; border-radius:8px; font-size: 16px; transition:background-color 0.5s, color 0.5s;}
+#header .main .dark .main_title .txt_center ul li:hover a{background-color: rgba(255,255,255,0.4); color:#ff6600;}
+
+
+#story{width: 100%; height: auto; /*background-color: #ddd;*/}
+#story .wrap{width: 1160px; height: 600px; padding: 0 10px; margin: 0 auto; /*background-color: #ffffaa;*/ text-align: center; overflow: hidden;}
+#story .wrap .title{padding-top: 60px; padding-bottom: 40px;}
+#story .wrap .title h2{font-size: 54px; line-height: 72px; color:#555; text-transform: capitalize;}
+#story .wrap .title h2 span{color:#ff6600;}
+#story .wrap .title p{font-size: 16px; color:#555; padding-top: 20px; text-transform: uppercase;}
+
+#story .wrap .cont{font-size: 0;}
+#story .wrap .cont > div{display: inline-block; vertical-align: top; width: 540px; height: 200px; margin: 0 15px; /*background-color: #ccffff;*/ font-size: 16px;}
+
+#story .wrap .cont > div.img_part{background-image: url(../img/cook-01.jpg); background-size: 120%; background-position: 50% 80%; border-radius:8px;}
+
+#story .wrap .cont > div.txt_part{padding-top: 40px;}
+#story .wrap .cont > div.txt_part p{padding-bottom: 40px;}
+
+#story .wrap .deco_img{padding-top: 100px;}
+
+#story .wrap .deco_img img{width: 100%;}
+
+.mid_01{text-align: center;}
+.mid_01 .outer{
+    display: inline-block;
+    width: 400px; height: 400px; padding: 50px; background-image: url(../img/cook-01.jpg); background-size: cover; background-position: 50% 50%;
+}
+.mid_01 .outer .inner{
+    width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); padding: 50px;
+    /*
+    display: none;
+    transition: display 1s;
+    */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.mid_01 .outer:hover .inner{/*display: block;*/}
+/* display:none; 본인 공간도 제거 => 마우스 오버 가능 공간이 아님 */
+/* display 선언은 transition(시간차)이 적용 불가 (z-index도 동일) */
+.mid_01 .outer:hover .inner{opacity: 1;}
+/* opacity: 0; 본인 공간이 존재 => 마우스 오버 가능 공간 */
+
+.mid_01 .outer .inner .cont{
+    width: 100%; height: 100%;
+    text-align: left;
+}
+.mid_01 .outer .inner .cont h3{
+    font-size: 36px; color: #ffff00; padding-bottom: 20px;
+}
+.mid_01 .outer .inner .cont p{
+    font-size: 18px;
+    color: #fff;
+    transition: color 0.5s;
+}
+.mid_01 .outer .inner .cont p a{font-size: 18px; color: #ffff00; float: right;}
+.mid_01 .outer .inner .cont p a:hover{color: #ff0000;}
+
+/* story_02 */
+#story_02{
+    background-color: #ededed;
+}
+#story_02 .top{
+    width: 100%; height: 460px;
+    background-image: url(../img/2.jpg);
+    background-position: 50% 80%;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+#story_02 .top .dark{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+
+#story_02 .bottom{margin-top: -360px;}
+#story_02 .bottom .wrap{
+    width: 1160px; padding: 0 10px; margin: 0 auto;
+}
+
+#story_02 .bottom .wrap .title{
+    text-align: center;
+    color: #fff;
+}
+#story_02 .bottom .wrap .title h2{
+    font-size: 54px;
+    line-height: 72px;
+    padding: 20px 0;
+}
+#story_02 .bottom .wrap .title p{
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+
+#story_02 .bottom .wrap .cont{
+    font-size: 0;
+}
+#story_02 .bottom .wrap .cont .outer{
+    display: inline-block;
+    width: 360px; height: 360px;
+    /* background-color: #ffaaff; */
+    padding: 30px;
+    vertical-align: top;
+    margin: 10px; margin-bottom: 20px;
+    border-radius: 8px;
+}
+#story_02 .bottom .wrap .cont .outer:nth-child(1){
+    width: 740px; height: 360px;
+    background-image: url(../img/menu_1.jpg);
+}
+#story_02 .bottom .wrap .cont .outer:nth-child(2){background-image: url(../img/menu_2.jpg);}
+#story_02 .bottom .wrap .cont .outer:nth-child(3){background-image: url(../img/menu_3.jpg);}
+#story_02 .bottom .wrap .cont .outer:nth-child(4){background-image: url(../img/menu_4.jpg);}
+#story_02 .bottom .wrap .cont .outer:nth-child(5){background-image: url(../img/menu_5.jpg);}
+
+
+#story_02 .bottom .wrap .cont .outer .inner{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    font-weight: bold;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    opacity: 0; transition: opacity 0.5s;
+}
+
+#story_02 .bottom .wrap .cont .outer:hover .inner{
+    opacity: 1;
+}
+
+#story_02 .bottom .wrap .cont .outer .inner h3{
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+    text-transform: capitalize;
+}
+#story_02 .bottom .wrap .cont .outer .inner p{
+    font-size: 18px;
+}
+#story_02 .bottom .wrap .cont .outer .inner p.price{
+    color: #ff6600;
+    position: absolute;
+    bottom: 20px; right: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 28px;
+}
+
+
+#story_02 .bottom .wrap a{
+    display: block;
+    width: 48px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0 60px;
+}
+
+/********* 실습5 *********/
+
+#story_03{
+    width: 100%; height: 100%;
+    background-image: url(../img/3.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#story_03 .wrap{
+    width: 1160px;
+    margin: 0 auto;
+}
+
+#story_03 .wrap .title{
+    text-align: center;
+    color: #555;
+    padding: 20px 0;
+}
+#story_03 .wrap .title h2{
+    font-size: 54px;
+    line-height: 72px;
+    padding: 20px 0;
+    text-transform: capitalize;
+}
+#story_03 .wrap .title p{
+    font-size: 16px;
+    padding-bottom: 40px;
+    text-transform: capitalize;
+}
+
+
+#story_03 .wrap .category{}
+#story_03 .wrap .category h3{
+    text-align: center;
+    padding: 40px 0 20px;
+    /* background-color: #ffaaaa; */
+    color: #999;
+    font-size: 24px;
+}
+#story_03 .wrap .category .menu_list{
+    font-size: 0;
+    position: relative;
+}
+
+#story_03 .wrap .category .menu_list:before{ /*before는 자식공간이랑 똑같다*/
+    content: "";
+    width: 1px; height: 100%;
+    background-color: #555;
+    position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+}
+
+#story_03 .wrap .category .menu_list .list{
+    display: inline-block;
+    width: 50%;
+    color: #555;
+    /* background-color: #fffaaa; */
+    padding: 0 15px 20px 15px;
+    vertical-align: top;
+}
+
+/* #story_03 .wrap .category .menu_list .list:first-child{
+    border-right: 1px solid #cfcfcf;
+} */
+
+#story_03 .wrap .category .menu_list .list h4{
+    font-size: 20px;
+    font-weight: bold;
+}
+#story_03 .wrap .category .menu_list .list p{
+    font-size: 16px;
+}
+#story_03 .wrap .category .menu_list .list p.price{
+    text-align: right;
+    color: #ff6600;
+    padding-bottom: 20px;
+}
+
+#story_03 .wrap .arrow{
+    padding-top: 60px;
+    text-align: center;
+}
+
+#story_03 .wrap .arrow a{
+    display: inline-block;
+}
+#story_03 .wrap .arrow a img{
+    display: block;
+}
+
+
+/* service */
+#service{
+    background-color: #ededed;
+}
+#service .wrap{
+    width: 1160px; height: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    color: #555;
+}
+
+#service .wrap .title{
+    padding: 60px 0 80px;
+}
+#service .wrap .title h2{
+    font-size: 54px;
+    line-height: 72px;
+}
+#service .wrap .title p{
+    font-size: 16px;
+}
+
+#service .wrap .content{}
+#service .wrap .content::after{
+    content: ""; display: block; clear: both;
+}
+#service .wrap .content .cont{
+    float: left;
+    width: 360px; height: 360px;
+    background-color: #ffeeee;
+    border-radius: 8px;
+    padding: 40px;
+    margin:0 10px;
+}
+#service .wrap .content .cont .img_part{
+    padding-top: 40px;
+}
+
+#service .wrap .content .cont .txt_part{
+    font-weight: bold;
+}
+#service .wrap .content .cont .txt_part h3{
+    font-size: 24px;
+    padding: 20px 0;
+}
+#service .wrap .content .cont .txt_part p{
+    font-size: 16px;
+}
+
+#service .wrap .content .cont:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 8px #ff9999;
+    /*box-shadow: 2px 2px 8px #ff9999, -2px -2px 4px #ff0000 ;*/
+    transition: transform 0.5s, box-shadow 0.5s; /*transition-delay: 0, 1.5s;*/
+    /*
+    #1. transition의 선언위치가 원본에서 적용될 경우, 마우스 오버시 진입과 진출에 대한 시간차를 동시에 적용 가능하다.
+    #2. transition의 선언위치가 마우스오버시 적용될 경우, 마우스오버시 진입간의 시간차만을 적용(레이어 팝업창에 적용 - 잔상을 제거하기 위함)
+    */
+}
+
+#service .wrap .arrow{
+    padding: 20px 0 60px;
+}
+#service .wrap .arrow a{display: inline-block;}
+#service .wrap .arrow a img{display: block;}
+
+/*
+[콘텐츠를 중앙 배치하는 방법]
+#1. 블록인 요소(width 값이 100%(유동값)가 아닌 실제 고정값(px)이 작용되었을때) : 본인에게 margin:0 auto;
+
+#2. 인라인(witdh값 선언할 수 없음) 또는 인라인 블록(width 값 선언할 수 있음) 요소 : 본인을 감싸고 있는 부모 또는 조상(블록인 요소인 경우)에게 text-align : text_center;을 선언한다.
+*/
+
+#offer{
+    width: 100%; height: 460px;
+    background-image: url(../img/6.jpg);
+    background-position: 50% 80%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+#offer .dark{
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+#offer .dark .cont{
+    width: 1160px; height: 460px;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+#offer .dark .cont .wrap{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#offer .dark .cont .wrap .title{
+    color: #fff;
+}
+#offer .dark .cont .wrap .title h2{
+    font-size: 54px;
+    line-height: 72px;
+    padding: 20px 0;
+}
+#offer .dark .cont .wrap .title p{
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+
+#offer .dark .cont .wrap .mail_bx{
+    width: 740px; height: 60px;
+    background-color: #fff;
+    border: 1px solid #ff6600;
+    border-radius: 8px;
+    font-size: 0;
+    vertical-align: top;
+    /* display: inline-block; */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+#offer .dark .cont .wrap .mail_bx input{
+    width: calc(100% - 50px);/* 박스(border값-2px) 738px - 버튼 50px */
+    height: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    padding: 11px 0;
+}
+#offer .dark .cont .wrap .mail_bx button{
+    width: 50px; height: 100%;
+    border: none;
+    background: transparent;
+    padding: 0;
+    color: #ff6600;
+    vertical-align: top;
+    font-size: 25px;
+    outline: none;
+    cursor: pointer;
+    outline: none;
+}
+
+/*register*/
+
+#register{
+    height: 400px;
+    height: auto; /* 자식의 값을 받아오겠다 */
+    background-color: #ededed;
+}
+#register .wrap{
+    width: 1160px; height: auto;
+    padding: 0 10px;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+#register .wrap .left, #register .wrap .right{
+    display: inline-block;
+    width: 50%; height: 400px;
+    vertical-align: top;
+    /* background: #ffffaa; */
+    padding: 20px;
+    font-size: 16px;
+}
+
+#register .wrap .left #map{
+    height: 100%;
+}
+#register .wrap .right{
+    vertical-align: top;
+}
+#register .wrap .right h2{  
+    font-size: 54px;
+    line-height: 72px;
+    color: #555;
+    padding: 20px 0;
+    text-align: center;
+}
+#register .wrap .right .cont{}
+#register .wrap .right .cont .input_line{
+    padding-bottom: 8px;
+}
+#register .wrap .right .cont .input_line input{
+    width: 100%; height: 35px;
+    padding: 0 20px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+}
+
+
+#register .wrap .right .btn{
+    text-align: right;
+}
+#register .wrap .right .btn button{
+    width: 240px; height: 41px;
+    font-size: 18px;
+    color: #fff;
+    background: #ff6600;
+    border: none; border-radius: 8px;
+}
+
+/* footer */
+
+#footer{
+    background-color: #000;
+}
+#footer .wrap{
+    width: 1160px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+
+#footer .wrap .sns{}
+#footer .wrap .sns ul{
+    font-size: 0;
+}
+#footer .wrap .sns ul li{
+    display: inline-block;
+    
+    margin: 10px 20px;
+}
+#footer .wrap .sns ul li a{
+    display: block;
+    width: 40px; height: 40px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    line-height: 38px;
+}
+#footer .wrap .sns ul li:hover a{
+    color: #ff6600;
+}
+
+#footer .wrap .logo{
+    padding: 10px 0;
+}
+#footer .wrap .copy{
+    font-size: 14px;
+    color: rgb(255, 255, 255);
+    padding: 14px 0;
+}
+
+/*top_btn*/
+.top_btn{
+    position: fixed;
+    right: 30px; bottom: 30px;
+    cursor: pointer;
+    z-index: 1;
+}
+.top_btn a{
+    color: #ff6600;
+    font-size: 50px;
+}
+
